@@ -5,6 +5,7 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'myxk',
@@ -18,6 +19,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
         'application.modules.admin.controllers.*',
+        'bootstrap.helpers.TbHtml',
 	),
 
 	'modules'=>array(
@@ -29,16 +31,42 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-        'admin'
+        'admin' => array(
+            'modules' => array(
+                'auth'
+            ),
+        )
 
 	),
 
 	// application components
 	'components'=>array(
+        // uncomment the following to use a MySQL database
+        'db'=>array(
+            'connectionString' => 'mysql:host=localhost;dbname=manyouxingkong',
+            'emulatePrepare' => true,
+            'username' => 'root',
+            'password' => '123',
+            'charset' => 'utf8',
+        ),
+        'authManager' => array(
+            'class' => 'CDbAuthManager',
+            'connectionID' => 'db',
+            'behaviors' => array(
+                'auth' => array(
+                    'class' => 'admin.modules.auth.components.AuthBehavior',
+                ),
+            ),
+        ),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+            'class' => 'admin.modules.auth.components.AuthWebUser',
+//            'admins' => array('admin', 'foo', 'bar'), // users with full access
 		),
+        'bootstrap'=>array(
+            'class'=>'bootstrap.components.Bootstrap',
+        ),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
@@ -53,15 +81,9 @@ return array(
 //		'db'=>array(
 //			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 //		),
-		// uncomment the following to use a MySQL database
 
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=manyouxingkong',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '123',
-			'charset' => 'utf8',
-		),
+
+
 
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

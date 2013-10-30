@@ -8183,7 +8183,7 @@ class CStatRelation extends CBaseActiveRelation
 			$this->defaultValue=$criteria['defaultValue'];
 	}
 }
-class CActiveRelation extends CBaseActiveRelation
+class frrrunCActiveRelation extends CBaseActiveRelation
 {
 	public $joinType='LEFT OUTER JOIN';
 	public $on='';
@@ -8191,7 +8191,7 @@ class CActiveRelation extends CBaseActiveRelation
 	public $with=array();
 	public $together;
 	 public $scopes;
-	public $through;
+	public $through;c
 	public function mergeWith($criteria,$fromScope=false)
 	{
 		if($criteria instanceof CDbCriteria)
@@ -10297,8 +10297,8 @@ class CListIterator implements Iterator
 		return $this->_i<$this->_c;
 	}
 }
-interface IApplicationComponent
-{
+interface rIApplicationComponent
+
 	public function init();
 	public function getIsInitialized();
 }

@@ -1,0 +1,67 @@
+* { margin:0px; padding:0px}
+body { font-size:12px; font:normal 12px/20px Arial, Verdana, Lucida, Helvetica, simsun, sans-serif; color:#737373; background:#FFF}
+a { margin:0px 3px; color:#3ca9ee; text-decoration: none}
+A:hover {COLOR: #f00; TEXT-DECORATION: none}
+A:active {COLOR: #333; TEXT-DECORATION: none}
+/*A:unknown {COLOR: #f00; TEXT-DECORATION: none}*/
+.top { height:60px; background:url(nav_bg.gif) repeat-x;}
+.top_wrapper{width:960px;margin:0 auto;}
+.top .nav { text-align:right; margin-right:15px; height:40px; line-height:50px;}
+.left { width:190px; height:100%; background:#deeeff; margin:8px; border-right:1px solid #a5ddff; float:left}
+.red { color:#f00}
+.green { color: green}
+
+.content{width:960px;margin:0 auto;}
+.clear{height:0px;width:auto;clear:both}
+ul {margin:0 10px;list-style-type:none;padding:4px;padding-bottom:0;}
+/*ul li ul {background:url(pic/tree5.gif) repeat-y 4px top;}*/
+ul li {margin:0; line-height:30px;}
+ul li a { color:#797979}
+.end {background:url(pageIcon.gif) no-repeat left center;}
+
+.folder a {background:url(forderIcon_close.gif) no-repeat left top;padding-left:20px;}
+.folder_open>a{background:url(forderIcon.gif) no-repeat left top;padding-left:20px;color:#16A5FF;}
+
+.msg {  background:#ffe1e1;border:1px solid #fca6a6; line-height:30px; color:#e84f4f; margin-bottom:10px;}
+.msg span { background: url(msg.gif) no-repeat 5px; padding-left:30px; display:block }
+.msg .actionerror li{ background:none; height:25px; line-height:25px;}
+.helpinfo { background: url(info_bg.gif) repeat-x; border-top: #e7f1ff 3px solid; border-bottom:1px #e7f1ff solid; padding:5px; margin-bottom:10px; }
+.helpinfo h2 { font-size:14px; color:#3aaaef; line-height:30px;}
+.helpinfo p { text-indent:15px; line-height:25px;}
+
+.listinfo table { border-bottom:#deeeff 1px solid; border-top:#deeeff 2px solid}
+.listinfo table .title { background:#f1f7fd; font-weight:bold; border-bottom:#deeeff 1px solid; border-top:#deeeff 2px solid; line-height:30px; text-align:center}
+.listinfo table .info td{ border-bottom:1px dashed #deeeff ; line-height:25px; padding-left:3px; }
+.listinfo .page { text-align:right; line-height:30px; padding-right:10px;}
+.listinfo .page i { color:#37afec; font-style:normal; margin:0px 3px}
+.listinfo table td em { margin: 0 3px; font-style:normal}  
+
+input[type='text'] { border:1px solid #d1e2fa; border-left:3px solid #d1e2fa; margin:0 2px; line-height:18px; height:18px;  text-indent:5px;}
+input[type='password'] { border:1px solid #d1e2fa; border-left:3px solid #d1e2fa; margin:0 2px; line-height:18px; height:18px;  text-indent:5px;}
+.but { background:#51bcf1 url(but_bg.gif) repeat-x; color:#FFF; padding:0px 5px; border-bottom:#2490d2 1px solid;border-right:#2490d2 1px solid; border-left:#b7e4ff solid 1px; border-top:#b7e4ff solid 1px; line-height:20px; height:20px;}
+
+.inputinfo dd { background:#fbfdff; padding:5px 10px; margin-top:2px; border-bottom:1px dashed #e7f1ff; line-height:30px;}
+.inputinfo em {color:#5dc0f3; font-weight:bold; font-style:normal; font-size:14px; margin:0px 3px;}
+
+.tool { background: #eef5ff; border:1px solid #e7f1ff;  border-right:0px; border-left:0px; padding:5px 5px; margin-bottom:10px;}
+.upimg { border:1px solid #e7f1ff; background:#FFF; width:230px; padding:4px; margin:6px; float:left;}
+.upimg2 { border:1px solid #ffd4c7; background:#ffefea; width:230px; padding:4px; margin:6px; float:left;}
+.upimg img {position:static;top:-50%;left:-50%; margin:auto;}
+.listimg { background: #eef5ff; padding:5px;}
+.img { width:120px; height:90px; margin:5px auto;}
+
+.tab { height:23px; border-bottom:3px solid #59bef3}
+.tab ul { list-style:none; }
+.tab li { cursor:pointer; display:block; float:left; text-align:center; text-decoration:none; width:75px; font-size:12px; height:21px; line-height:21px; margin:0 2px; position:relative; top:1px; z-index:9; }
+.tab li:hover { text-decoration:underline; }
+.tab li.curr { background:url(tab_nav_bg.gif); cursor:default; font-weight:bold; color:#FFF }
+.down { background: url(tin.jpg) no-repeat 5px #daf1ff ; padding-left:30px; border:1px solid #a5ddff; line-height:30px; color:#0077cc; margin-bottom:10px; }
+
+
+.logo { float:left; background: url(LOGO.gif) no-repeat 20px 10px; width:300px; height:50px;}
+.right { padding:5px; width:734px;height:100%;float:right;}
+.left .nav { background: #fff; width:162px; border:1px solid #a5ddff; border-right:0px;}
+.left .nav a { font-weight:bold; color:#16a5ff}
+
+.msg .actionerror li{ background:none; height:25px; line-height:25px;}
+.footer { text-align:center; line-height:35px; background:#ECECEC}

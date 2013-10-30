@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'管理员列表', 'url'=>array('index')),
-	array('label'=>'管理管理员', 'url'=>array('admin')),
+//	array('label'=>'管理员列表', 'url'=>array('index')),
+	array('label'=>'管理员列表显示', 'url'=>array('admin')),
 );
 ?>
 

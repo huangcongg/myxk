@@ -3,8 +3,8 @@
 /* @var $model Admin */
 
 $this->breadcrumbs=array(
-	'管理员列表'=>array('index'),
-	'管理',
+	'管理员管理'=>array('admin'),
+	'管理员列表显示',
 );
 
 $this->menu=array(
@@ -26,10 +26,10 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>管理管理员</h1>
+<h1>管理员列表显示</h1>
 
 <p>
-你可以在关键词比较运算符搜索， (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+你可以在关键词前面使用比较运算符搜索， (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>)
 </p>
 

@@ -18,6 +18,8 @@
  */
 class Admin extends CActiveRecord
 {
+    public $initialPassword = null;
+    public $repeat_password = null;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -34,11 +36,15 @@ class Admin extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, email, phone, ctime, etime, regip, lasttime, lastip, group', 'required'),
-			array('ctime, etime, lasttime, group', 'numerical', 'integerOnly'=>true),
-			array('username, password, phone', 'length', 'max'=>20),
+			array('username,  email, phone, group', 'required'),
+            array('password,repeat_password','required','on'=>'resetPassword,insert'),
+			array('phone', 'numerical', 'integerOnly'=>true),
+            array('username', 'length', 'min'=>3,'max'=>20),
+            array('password,repeat_password','length','min'=>6,'max'=>20,'on'=>'insert'),
+            array('repeat_password','compare','compareAttribute'=>'password'),
+			array('phone', 'length', 'max'=>20),
 			array('email', 'length', 'max'=>50),
-			array('regip, lastip', 'length', 'max'=>15),
+            array('email', 'email'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('admin_id, username, password, email, phone, ctime, etime, regip, lasttime, lastip, group', 'safe', 'on'=>'search'),
@@ -73,6 +79,7 @@ class Admin extends CActiveRecord
 			'lasttime' => '最后登录时间',
 			'lastip' => '最后登录ip',
 			'group' => '用户组',
+            'repeat_password' =>'确认密码',
 		);
 	}
 
@@ -125,12 +132,51 @@ class Admin extends CActiveRecord
 
     public function validatePassword($password)
     {
-        var_dump($this->hashPassword($password,$this->salt));
+        var_dump($this->hashPassword($password,$this->salt));echo "<br>";
+        var_dump($this->password);
         return $this->hashPassword($password,$this->salt)===$this->password;
     }
 
     public function hashPassword($password,$salt)
     {
         return md5($salt.$password);
+    }
+
+    public function beforeSave(){
+        if(empty($this->password)&&empty($this->repeat_password)&&!empty($this->initialPassword))
+            $this->password = $this->repeat_password = $this->initialPassword;
+
+        if(!empty($this)){
+
+            if($this->isNewRecord){
+                $salt = $this->generate_salt(5);//生成salt
+                $this->salt = $salt;
+            }
+
+            $this->password = $this->hashPassword($this->password,$this->salt);
+            $this->repeat_password = $this->hashPassword($this->repeat_password,$this->salt);
+        }
+
+        return parent::beforeSave();
+    }
+
+//    public function afterFind(){
+//        $this->initialPassword = $this->password;
+//        $this->password = null;
+//
+//        parent::afterFind();
+//    }
+
+    protected function generate_salt($length) {
+        $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_[]{}<>~`+=,.;:/?|';
+        $salt = '';
+        for ($i = 0; $i < $length; $i++) {
+            // 这里提供两种字符获取方式
+            // 第一种是使用 substr 截取$chars中的任意一位字符；
+            // 第二种是取字符数组 $chars 的任意元素
+            // $password .= substr($chars, mt_rand(0, strlen($chars) – 1), 1);
+            $salt .= $chars[mt_rand(0, strlen($chars) - 1)];
+        }
+        return $salt;
     }
 }

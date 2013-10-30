@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'管理员列表', 'url'=>array('index')),
-	array('label'=>'增加管理员', 'url'=>array('create')),
+//	array('label'=>'管理员列表', 'url'=>array('index')),
+	array('label'=>'增加一个管理员', 'url'=>array('create')),
 	array('label'=>'修改该管理员', 'url'=>array('update', 'id'=>$model->admin_id)),
 	array('label'=>'删除该管理员', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->admin_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'管理员管理', 'url'=>array('admin')),
+	array('label'=>'管理员列表显示', 'url'=>array('admin')),
 );
 ?>
 

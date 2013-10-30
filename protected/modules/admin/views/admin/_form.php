@@ -31,6 +31,12 @@
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 
+    <div class="row">
+        <?php echo $form->labelEx($model,'repeat_password'); ?>
+        <?php echo $form->passwordField($model,'repeat_password',array('size'=>20,'maxlength'=>20)); ?>
+        <?php echo $form->error($model,'repeat_password'); ?>
+    </div>
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->textField($model,'email',array('size'=>50,'maxlength'=>50)); ?>

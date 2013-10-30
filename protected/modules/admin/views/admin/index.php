@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'添加管理员', 'url'=>array('create')),
-	array('label'=>'管理管理员', 'url'=>array('admin')),
+	array('label'=>'管理员列表显示', 'url'=>array('admin')),
 );
 ?>
 

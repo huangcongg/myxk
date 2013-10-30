@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'管理员列表', 'url'=>array('index')),
+//	array('label'=>'管理员列表', 'url'=>array('index')),
 	array('label'=>'增加管理员', 'url'=>array('create')),
 	array('label'=>'查看该管理员', 'url'=>array('view', 'id'=>$model->admin_id)),
-	array('label'=>'管理管理员', 'url'=>array('admin')),
+	array('label'=>'管理员列表显示', 'url'=>array('admin')),
 );
 ?>
 
