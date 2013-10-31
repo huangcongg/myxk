@@ -3,19 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/modules/auth" afterPath="$PROJECT_DIR$/protected/modules/admin/modules/auth" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/models/Admin.php" afterPath="$PROJECT_DIR$/protected/modules/admin/models/Admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/User.php" afterPath="$PROJECT_DIR$/protected/models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/admin/_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/admin/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/gii/generators/crud/templates/default/admin.php" afterPath="$PROJECT_DIR$/framework/gii/generators/crud/templates/default/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/admin/admin.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/admin/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/admin.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/create.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/layouts/main.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/update.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="myxk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -455,7 +442,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1024" height="718" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
