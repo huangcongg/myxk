@@ -1,15 +1,13 @@
 <?php
-/* @var $this AdminController */
-/* @var $model Admin */
+/* @var $this GradeController */
+/* @var $model Grade */
 
 $this->breadcrumbs=array(
-	'管理员管理'=>array('admin'),
-	'管理员列表显示',
+	'年级管理',
 );
 
 $this->menu=array(
-	array('label'=>'管理员管理', 'url'=>array('index')),
-	array('label'=>'创建管理员', 'url'=>array('create')),
+	array('label'=>'增加年级', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +16,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#admin-grid').yiiGridView('update', {
+	$('#grade-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,10 +24,10 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>管理员列表显示</h1>
+<h1>年级管理</h1>
 
 <p>
-你可以在关键词前面使用比较运算符搜索， (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+你还可以输入比较比较运算符辅助搜索，但是必须在关键词的最开始处。(<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>)
 </p>
 
@@ -41,23 +39,16 @@ or <b>=</b>)
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'admin-grid',
+	'id'=>'grade-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'admin_id',
-		'username',
-		'email',
-		'phone',
+		'grade_id',
+		'grade_name',
+		'school_id',
         array(
-            'name'=>'ctime',
-            'type'=>'datetime',
-            'filter'=>false,
-        ),
-        array(
-            'name'=>'etime',
-            'type'=>'datetime',
-            'filter'=>false,
+            'name'=>'school_id',
+            'value'=>'$data->school->school_name'
         ),
 		array(
 			'class'=>'CButtonColumn',

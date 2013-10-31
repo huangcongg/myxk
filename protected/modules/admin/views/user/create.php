@@ -8,7 +8,6 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'用户列表', 'url'=>array('index')),
 	array('label'=>'管理', 'url'=>array('admin')),
 );
 ?>

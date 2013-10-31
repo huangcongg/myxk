@@ -151,6 +151,11 @@ class Admin extends CActiveRecord
             if($this->isNewRecord){
                 $salt = $this->generate_salt(5);//生成salt
                 $this->salt = $salt;
+                $this->lasttime = $this->etime = $this->ctime = time();
+                $this->lastip = $this->regip = Yii::app()->request->userHostAddress;
+            }else{
+                $this->etime = time();
+
             }
 
             $this->password = $this->hashPassword($this->password,$this->salt);

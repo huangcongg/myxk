@@ -44,43 +44,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'ctime'); ?>
-		<?php echo $form->textField($model,'ctime'); ?>
-		<?php echo $form->error($model,'ctime'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'etime'); ?>
-		<?php echo $form->textField($model,'etime'); ?>
-		<?php echo $form->error($model,'etime'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'lasttime'); ?>
-		<?php echo $form->textField($model,'lasttime'); ?>
-		<?php echo $form->error($model,'lasttime'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'lastip'); ?>
-		<?php echo $form->textField($model,'lastip'); ?>
-		<?php echo $form->error($model,'lastip'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'type'); ?>
-		<?php echo $form->textField($model,'type'); ?>
+		<?php echo $form->dropDownList($model,'type',array('1'=>'学生','2'=>'教师','3'=>'授课教师')); ?>
 		<?php echo $form->error($model,'type'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'total_points'); ?>
-		<?php echo $form->textField($model,'total_points'); ?>
-		<?php echo $form->error($model,'total_points'); ?>
-	</div>
-
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? '添加' : '保存'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

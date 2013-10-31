@@ -50,6 +50,9 @@
             'linkLabelWrapper'=>array('class'=>'end'),
             'items'=>array(
                 array('label'=>'首页', 'url'=>array('/admin/default/index'),'itemOptions'=>array('class'=>'folder')),
+                array('label'=>'学校管理', 'url'=>array('/admin/school/admin'),'itemOptions'=>array('class'=>'folder')),
+                array('label'=>'年级管理', 'url'=>array('/admin/grade/admin'),'itemOptions'=>array('class'=>'folder')),
+                array('label'=>'班级管理', 'url'=>array('/admin/clase/admin'),'itemOptions'=>array('class'=>'folder')),
                 array('label'=>'用户管理', 'url'=>array('/admin/user/admin'),'itemOptions'=>array('class'=>'folder')),
                 array('label'=>'管理员管理',
                     'url'=>'javascript:;',

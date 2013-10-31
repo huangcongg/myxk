@@ -1,6 +1,6 @@
 <?php
 
-class UserController extends CommonController
+class SchoolController extends CommonController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -27,7 +27,21 @@ class UserController extends CommonController
 	public function accessRules()
 	{
 		return array(
-
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('index','view'),
+				'users'=>array('*'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('create','update'),
+				'users'=>array('@'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete'),
+				'users'=>array('admin'),
+			),
+			array('deny',  // deny all users
+				'users'=>array('*'),
+			),
 		);
 	}
 
@@ -35,16 +49,12 @@ class UserController extends CommonController
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-    public function actionView($id)
-    {
-        $model = $this->loadModel($id);
-        $type = array('1'=>'学生','2'=>'教师','3'=>'授课教师');
-        $model->type = $type[$model->type];
-
-        $this->render('view',array(
-            'model'=>$model,
-        ));
-    }
+	public function actionView($id)
+	{
+		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
 
 	/**
 	 * Creates a new model.
@@ -52,16 +62,16 @@ class UserController extends CommonController
 	 */
 	public function actionCreate()
 	{
-		$model=new User;
+		$model=new School;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['User']))
+		if(isset($_POST['School']))
 		{
-			$model->attributes=$_POST['User'];
+			$model->attributes=$_POST['School'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->user_id));
+				$this->redirect(array('view','id'=>$model->school_id));
 		}
 
 		$this->render('create',array(
@@ -81,11 +91,11 @@ class UserController extends CommonController
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['User']))
+		if(isset($_POST['School']))
 		{
-			$model->attributes=$_POST['User'];
+			$model->attributes=$_POST['School'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->user_id));
+				$this->redirect(array('view','id'=>$model->school_id));
 		}
 
 		$this->render('update',array(
@@ -112,7 +122,7 @@ class UserController extends CommonController
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('User');
+		$dataProvider=new CActiveDataProvider('School');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -123,10 +133,10 @@ class UserController extends CommonController
 	 */
 	public function actionAdmin()
 	{
-		$model=new User('search');
+		$model=new School('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['User']))
-			$model->attributes=$_GET['User'];
+		if(isset($_GET['School']))
+			$model->attributes=$_GET['School'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -137,12 +147,12 @@ class UserController extends CommonController
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return User the loaded model
+	 * @return School the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=User::model()->findByPk($id);
+		$model=School::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -150,11 +160,11 @@ class UserController extends CommonController
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param User $model the model to be validated
+	 * @param School $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='user-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='school-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

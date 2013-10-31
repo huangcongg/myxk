@@ -1,14 +1,13 @@
 <?php
-/* @var $this UserController */
-/* @var $model User */
+/* @var $this ClaseController */
+/* @var $model Clase */
 
 $this->breadcrumbs=array(
-	'用户管理'=>array('index'),
-	'管理',
+	'班级管理'
 );
 
 $this->menu=array(
-	array('label'=>'添加用户', 'url'=>array('create')),
+	array('label'=>'增加班级', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -17,7 +16,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#user-grid').yiiGridView('update', {
+	$('#clase-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -25,11 +24,11 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>用户管理</h1>
+<h1>班级管理</h1>
 
 <p>
-你还可以在某个关键词的开始部分输入比较运算符 (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>)，用以搜索符合要求的数据。
+你还可以输入比较比较运算符辅助搜索，但是必须在关键词的最开始处。(<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+or <b>=</b>)
 </p>
 
 <?php echo CHtml::link('高级搜索','#',array('class'=>'search-button')); ?>
@@ -40,23 +39,13 @@ or <b>=</b>)，用以搜索符合要求的数据。
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'user-grid',
+	'id'=>'clase-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'user_id',
-		'username',
-		'password',
-		'email',
-		'phone',
-		'ctime',
-		/*
-		'etime',
-		'lasttime',
-		'lastip',
-		'type',
-		'total_points',
-		*/
+		'class_id',
+		'class_name',
+		'grade_id',
 		array(
 			'class'=>'CButtonColumn',
 		),

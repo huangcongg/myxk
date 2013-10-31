@@ -50,83 +50,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'ctime'); ?>
-        <?php
-        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-            'language'=>'zh_cn',
-            'model'=>$model,
-            'attribute'=>'ctime',
-            'options' => array(
-                'dateFormat'=>'yy-mm-dd', //database save format
-                //'altFormat'=>'mm-dd-yy' //display format
-                //'showAnim'=>'fold',
-                //'yearRange'=>'-3:+3'
-            ),
-            'htmlOptions'=>array(
-                'readonly'=>'readonly',
-                'style'=>'width:90px;',
-            )
-        ));?>
-		<?php echo $form->error($model,'ctime'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'etime'); ?>
-        <?php
-        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-            'language'=>'zh_cn',
-            'model'=>$model,
-            'attribute'=>'etime',
-            'options' => array(
-                'dateFormat'=>'yy-mm-dd', //database save format
-                //'altFormat'=>'mm-dd-yy' //display format
-                //'showAnim'=>'fold',
-                //'yearRange'=>'-3:+3'
-            ),
-            'htmlOptions'=>array(
-                'readonly'=>'readonly',
-                'style'=>'width:90px;',
-            )
-        ));?>
-		<?php echo $form->error($model,'etime'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'regip'); ?>
-		<?php echo $form->textField($model,'regip',array('size'=>15,'maxlength'=>15)); ?>
-		<?php echo $form->error($model,'regip'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'lasttime'); ?>
-        <?php
-        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-            'language'=>'zh_cn',
-            'model'=>$model,
-            'attribute'=>'lasttime',
-            'options' => array(
-                'dateFormat'=>'yy-mm-dd', //database save format
-                //'altFormat'=>'mm-dd-yy' //display format
-                //'showAnim'=>'fold',
-                //'yearRange'=>'-3:+3'
-            ),
-            'htmlOptions'=>array(
-                'readonly'=>'readonly',
-                'style'=>'width:90px;',
-            )
-        ));?>
-		<?php echo $form->error($model,'lasttime'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'lastip'); ?>
-		<?php echo $form->textField($model,'lastip',array('size'=>15,'maxlength'=>15)); ?>
-		<?php echo $form->error($model,'lastip'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'group'); ?>
-		<?php echo $form->textField($model,'group'); ?>
+		<?php echo $form->dropDownList($model,'group',array('1'=>'系统管理员','2'=>'校级管理员')); ?>
 		<?php echo $form->error($model,'group'); ?>
 	</div>
 

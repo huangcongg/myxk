@@ -34,10 +34,11 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, email, phone, ctime, etime, lasttime, lastip, type, total_points', 'required'),
-			array('ctime, etime, lasttime, lastip, type, total_points', 'numerical', 'integerOnly'=>true),
+			array('username, password,  type', 'required'),
+            array('username','unique'),
 			array('username, password', 'length', 'max'=>20),
 			array('email, phone', 'length', 'max'=>50),
+            array('email', 'email'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('user_id, username, password, email, phone, ctime, etime, lasttime, lastip, type, total_points', 'safe', 'on'=>'search'),
@@ -120,4 +121,20 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    protected function beforeSave()
+    {
+        if(parent::beforeSave())
+        {
+            if($this->isNewRecord)
+            {
+                $this->ctime=$this->etime=time();
+            }
+            else
+                $this->etime=time();
+            return true;
+        }
+        else
+            return false;
+    }
 }
