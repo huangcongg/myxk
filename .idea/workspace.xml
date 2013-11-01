@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/TeacherController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/_form.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/_search.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/admin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/create.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/modules/auth" afterPath="$PROJECT_DIR$/protected/modules/admin/modules/auth" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/AdminController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Clase.php" afterPath="$PROJECT_DIR$/protected/models/Clase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/ClaseController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/ClaseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Grade.php" afterPath="$PROJECT_DIR$/protected/models/Grade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/GradeController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/GradeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/SchoolController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/SchoolController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Student.php" afterPath="$PROJECT_DIR$/protected/models/Student.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/User.php" afterPath="$PROJECT_DIR$/protected/models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/_search.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/_view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/admin.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/create.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/layouts/main.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/update.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/update.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="myxk.iws" />
@@ -83,81 +54,7 @@
     <favorites_list name="myxk" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="TeacherController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/TeacherController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="725" selection-end="725" vertical-scroll-proportion="-6.7647057">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="-12.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/AdminController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="388" selection-end="522" vertical-scroll-proportion="-10.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClaseController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/ClaseController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="16" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.6057495">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GradeController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/GradeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="14" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-10.0">
-              <folding>
-                <marker date="1383298393122" expanded="true" signature="733:887" placeholder="..." />
-                <marker date="1383298393122" expanded="true" signature="901:1054" placeholder="..." />
-                <marker date="1383298393122" expanded="true" signature="1068:1215" placeholder="..." />
-                <marker date="1383298393122" expanded="true" signature="1229:1288" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SchoolController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/SchoolController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="12" selection-start="728" selection-end="1276" vertical-scroll-proportion="-5.0">
-              <folding>
-                <marker date="1383298401247" expanded="true" signature="734:873" placeholder="..." />
-                <marker date="1383298401247" expanded="true" signature="887:1040" placeholder="..." />
-                <marker date="1383298401247" expanded="true" signature="1054:1201" placeholder="..." />
-                <marker date="1383298401247" expanded="true" signature="1215:1274" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/layouts/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="35" selection-start="3055" selection-end="3055" vertical-scroll-proportion="-3.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -477,7 +374,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1024" height="718" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -485,7 +382,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26078027" sideWeight="0.67021275" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26078027" sideWeight="0.67021275" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -611,7 +508,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="35" selection-start="3055" selection-end="3055" vertical-scroll-proportion="-3.75">
+        <state line="66" column="35" selection-start="3055" selection-end="3055" vertical-scroll-proportion="0.49902153">
           <folding />
         </state>
       </provider>
@@ -632,24 +529,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/GradeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="14" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-10.0">
+        <state line="43" column="14" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.52837574">
           <folding>
-            <marker date="1383298393122" expanded="true" signature="733:887" placeholder="..." />
-            <marker date="1383298393122" expanded="true" signature="901:1054" placeholder="..." />
-            <marker date="1383298393122" expanded="true" signature="1068:1215" placeholder="..." />
-            <marker date="1383298393122" expanded="true" signature="1229:1288" placeholder="..." />
+            <marker date="1383298393122" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383298393122" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383298393122" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383298393122" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/SchoolController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="12" selection-start="728" selection-end="1276" vertical-scroll-proportion="-5.0">
+        <state line="29" column="12" selection-start="728" selection-end="1276" vertical-scroll-proportion="0.26418787">
           <folding>
-            <marker date="1383298401247" expanded="true" signature="734:873" placeholder="..." />
-            <marker date="1383298401247" expanded="true" signature="887:1040" placeholder="..." />
-            <marker date="1383298401247" expanded="true" signature="1054:1201" placeholder="..." />
-            <marker date="1383298401247" expanded="true" signature="1215:1274" placeholder="..." />
+            <marker date="1383298401247" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383298401247" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383298401247" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1383298401247" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -677,7 +574,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/ClaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="16" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.6057495">
+        <state line="32" column="14" selection-start="874" selection-end="874" vertical-scroll-proportion="0.60665363">
           <folding />
         </state>
       </provider>

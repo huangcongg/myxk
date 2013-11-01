@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 年 10 月 31 日 18:38
+-- 生成日期: 2013 年 11 月 01 日 17:45
 -- 服务器版本: 5.1.69
 -- PHP 版本: 5.3.3
 
@@ -128,10 +128,10 @@ CREATE TABLE IF NOT EXISTS `AuthItemChild` (
 --
 
 CREATE TABLE IF NOT EXISTS `clase` (
-  `class_id` int(11) NOT NULL AUTO_INCREMENT,
-  `class_name` varchar(50) NOT NULL,
+  `clase_id` int(11) NOT NULL AUTO_INCREMENT,
+  `clase_name` varchar(50) NOT NULL,
   `grade_id` int(11) NOT NULL,
-  PRIMARY KEY (`class_id`),
+  PRIMARY KEY (`clase_id`),
   KEY `grade_id` (`grade_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='班级' AUTO_INCREMENT=3 ;
 
@@ -139,9 +139,9 @@ CREATE TABLE IF NOT EXISTS `clase` (
 -- 转存表中的数据 `clase`
 --
 
-INSERT INTO `clase` (`class_id`, `class_name`, `grade_id`) VALUES
+INSERT INTO `clase` (`clase_id`, `clase_name`, `grade_id`) VALUES
 (1, '班级1', 2),
-(2, '班级2', 1);
+(2, '班级2', 5);
 
 -- --------------------------------------------------------
 
@@ -402,15 +402,20 @@ CREATE TABLE IF NOT EXISTS `grade` (
   `school_id` int(11) NOT NULL,
   PRIMARY KEY (`grade_id`),
   KEY `school_id` (`school_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='年级' AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='年级' AUTO_INCREMENT=8 ;
 
 --
 -- 转存表中的数据 `grade`
 --
 
 INSERT INTO `grade` (`grade_id`, `grade_name`, `school_id`) VALUES
-(1, '一年级1', 3),
-(2, '二年级', 2);
+(1, '一年级', 3),
+(2, '二年级', 2),
+(3, '一年级', 2),
+(4, '三年级', 3),
+(5, '二年级', 3),
+(6, '三年级', 2),
+(7, '四年级', 3);
 
 -- --------------------------------------------------------
 
@@ -544,8 +549,9 @@ CREATE TABLE IF NOT EXISTS `seminar_statistics` (
 CREATE TABLE IF NOT EXISTS `student` (
   `user_id` int(11) NOT NULL,
   `realname` varchar(20) NOT NULL,
-  `grade` varchar(20) NOT NULL,
-  `school` varchar(50) NOT NULL,
+  `grade_id` int(11) NOT NULL,
+  `school_id` int(11) NOT NULL,
+  `clase_id` int(11) NOT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='学生表';
@@ -767,7 +773,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `type` int(1) NOT NULL,
   `total_points` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='用户表' AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='用户表' AUTO_INCREMENT=11 ;
 
 --
 -- 转存表中的数据 `user`
@@ -822,6 +828,12 @@ ALTER TABLE `grade`
 --
 ALTER TABLE `student`
   ADD CONSTRAINT `student_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
+
+--
+-- 限制表 `teacher`
+--
+ALTER TABLE `teacher`
+  ADD CONSTRAINT `teacher_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
