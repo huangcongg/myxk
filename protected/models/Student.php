@@ -6,8 +6,8 @@
  * The followings are the available columns in table 'student':
  * @property integer $user_id
  * @property string $realname
- * @property string $grade
- * @property string $school
+ * @property string $grade_id
+ * @property string $school_id
  *
  * The followings are the available model relations:
  * @property User $user
@@ -30,13 +30,12 @@ class Student extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, realname, grade, school', 'required'),
-			array('user_id', 'numerical', 'integerOnly'=>true),
-			array('realname, grade', 'length', 'max'=>20),
-			array('school', 'length', 'max'=>50),
+			array('realname, grade_id, school_id,clase_id', 'required'),
+			array('grade_id, school_id,clase_id', 'numerical', 'integerOnly'=>true),
+			array('realname, grade_id,school_id,clase_id', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('user_id, realname, grade, school', 'safe', 'on'=>'search'),
+			array('user_id, realname, grade_id, school_id,clase_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,6 +48,9 @@ class Student extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
+            'clase' => array(self::BELONGS_TO,'Clase', 'clase_id'),
+            'grade' => array(self::BELONGS_TO,'Grade', 'grade_id'),
+            'school' => array(self::BELONGS_TO,'School', 'school_id')
 		);
 	}
 
@@ -58,10 +60,11 @@ class Student extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'user_id' => 'User',
-			'realname' => 'Realname',
-			'grade' => 'Grade',
-			'school' => 'School',
+			'user_id' => 'user_id',
+			'realname' => '真实姓名',
+			'grade_id' => '年级',
+			'school_id' => '学校',
+            'clase_id' => '班级',
 		);
 	}
 
@@ -85,7 +88,7 @@ class Student extends CActiveRecord
 
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('realname',$this->realname,true);
-		$criteria->compare('grade',$this->grade,true);
+		$criteria->compare('grade_id',$this->grade_id,true);
 		$criteria->compare('school',$this->school,true);
 
 		return new CActiveDataProvider($this, array(
@@ -103,4 +106,5 @@ class Student extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
 }

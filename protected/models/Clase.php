@@ -27,12 +27,12 @@ class Clase extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('class_name,grade_id', 'required'),
+			array('clase_name,grade_id', 'required'),
 			array('grade_id', 'numerical', 'integerOnly'=>true),
-			array('class_name', 'length', 'max'=>50),
+			array('clase_name', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('class_id, class_name, grade_id', 'safe', 'on'=>'search'),
+			array('clase_id, clase_name, grade_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,8 +54,8 @@ class Clase extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'class_id' => '班级id',
-			'class_name' => '班级名称',
+			'clase_id' => '班级id',
+			'clase_name' => '班级名称',
 			'grade_id' => '年级',
 		);
 	}
@@ -78,8 +78,8 @@ class Clase extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('class_id',$this->class_id);
-		$criteria->compare('class_name',$this->class_name,true);
+		$criteria->compare('clase_id',$this->clase_id);
+		$criteria->compare('clase_name',$this->clase_name,true);
 		$criteria->compare('grade_id',$this->grade_id);
 
 		return new CActiveDataProvider($this, array(
@@ -97,4 +97,20 @@ class Clase extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    public function getGradeList($school_id){
+
+        //search all grades by school_id
+        $model = Grade::model()->findAll('school_id=:school_id',array(':school_id'=>$school_id));
+
+        return CHtml::listData($model, 'grade_id', 'grade_name');
+    }
+
+    public function items($grade_id){
+
+        $model = $this->findAllByAttributes(array('grade_id'=>$grade_id));
+
+        return CHtml::listData($model,'clase_id','clase_name');
+
+    }
 }

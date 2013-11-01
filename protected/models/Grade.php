@@ -100,4 +100,6 @@ class Grade extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+
 }

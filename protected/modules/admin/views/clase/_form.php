@@ -22,9 +22,9 @@
 
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'class_name'); ?>
-		<?php echo $form->textField($model,'class_name',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'class_name'); ?>
+		<?php echo $form->labelEx($model,'clase_name'); ?>
+		<?php echo $form->textField($model,'clase_name',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'clase_name'); ?>
 	</div>
 
 	<div class="row">
@@ -33,11 +33,11 @@
             array(
                 'ajax'=> array(
                     'type'=>'POST', //request type
-                    'url'=>CController::createUrl('/admin/grade/dynamicgrade'), //url to call.
+                    'url'=>CController::createUrl('/admin/clase/dynamicgrade'), //url to call.
                     'update'=>'#Clase_grade_id', //selector to update
                     'data'=>array('school_id'=>'js:this.value')
                 ))); ?>
-        <?php echo $form->dropDownList($model,'grade_id',array()); ?>
+        <?php echo $form->dropDownList($model,'grade_id',$model->getGradeList($model->school_id)); ?>
 
 		<?php echo $form->error($model,'grade_id'); ?>
 	</div>

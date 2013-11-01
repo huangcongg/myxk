@@ -14,7 +14,7 @@ class UserController extends CommonController
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
+			'accessControl', // perform access control for CRUD operationsc
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
@@ -38,11 +38,14 @@ class UserController extends CommonController
     public function actionView($id)
     {
         $model = $this->loadModel($id);
+        $student = $this->loadModelStduent($id);
+
         $type = array('1'=>'学生','2'=>'教师','3'=>'授课教师');
         $model->type = $type[$model->type];
 
         $this->render('view',array(
             'model'=>$model,
+            'student'=>$student,
         ));
     }
 
@@ -53,19 +56,33 @@ class UserController extends CommonController
 	public function actionCreate()
 	{
 		$model=new User;
+        $student = new Student;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['User']))
 		{
-			$model->attributes=$_POST['User'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->user_id));
+            $model->attributes=$_POST['User'];
+            $student->attributes=$_POST['Student'];
+
+            // validate BOTH $a and $b
+            $valid=$model->validate();
+            $valid=$student->validate() && $valid;
+
+
+			if($valid){
+                $model->save(false);
+                $student->user_id = $model->user_id;
+                $student->save(false);
+                $this->redirect(array('view','id'=>$model->user_id));
+            }
+
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+            'student'=>$student,
 		));
 	}
 
@@ -77,19 +94,24 @@ class UserController extends CommonController
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+        $student=$this->loadModelStudent($id);
 
-		// Uncomment the following line if AJAX validation is needed
+		// Uncomment the following line if AJAX validation is neededv
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['User']))
 		{
-			$model->attributes=$_POST['User'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->user_id));
+			$model->attributes = $_POST['User'];
+            $student->attributes = $_POST['Student'];
+			if($model->save()){
+                $student->save();
+                $this->redirect(array('view','id'=>$model->user_id));
+            }
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
+            'student'=>$student,
 		));
 	}
 
@@ -100,7 +122,8 @@ class UserController extends CommonController
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$this->loadModelStudent($id)->delete();
+        $this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -148,6 +171,14 @@ class UserController extends CommonController
 		return $model;
 	}
 
+    public function loadModelStudent($id)
+    {
+        $model=Student::model()->findByPk($id);
+        if($model===null)
+            throw new CHttpException(404,'The requested page does not exist.');
+        return $model;
+    }
+
 	/**
 	 * Performs the AJAX validation.
 	 * @param User $model the model to be validated
@@ -160,4 +191,28 @@ class UserController extends CommonController
 			Yii::app()->end();
 		}
 	}
+
+    public function actionDynamicGrade(){
+
+        $model = Clase::model()->getGradeList($_POST['school_id']);
+
+
+        foreach($model as $key => $v){
+            echo CHtml::tag('option',array('value'=>$key),CHtml::encode($v),true);
+        }
+
+
+    }
+
+    public function actionDynamicClase(){
+
+        $model = Clase::model()->items($_POST['grade_id']);
+
+
+        foreach($model as $key => $v){
+            echo CHtml::tag('option',array('value'=>$key),CHtml::encode($v),true);
+        }
+
+
+    }
 }

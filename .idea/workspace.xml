@@ -2,13 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/TeacherController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/_form.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/_search.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/admin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/create.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/update.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/teacher/view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/modules/auth" afterPath="$PROJECT_DIR$/protected/modules/admin/modules/auth" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/AdminController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/AdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Clase.php" afterPath="$PROJECT_DIR$/protected/models/Clase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/ClaseController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/ClaseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Grade.php" afterPath="$PROJECT_DIR$/protected/models/Grade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/GradeController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/GradeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/SchoolController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/SchoolController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Student.php" afterPath="$PROJECT_DIR$/protected/models/Student.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/User.php" afterPath="$PROJECT_DIR$/protected/models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/_search.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/_search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/_view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/admin.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/create.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/layouts/main.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/layouts/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/update.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/update.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/clase/view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/clase/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/user/view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/user/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="myxk.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/AdminLoginForm.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1382944500888" ignored="false" />
     <file path="/AdminIdentity.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1382945305191" ignored="false" />
-    <file path="/a.dummy" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383091840138" ignored="false" />
+    <file path="/a.dummy" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383287752034" ignored="false" />
     <file path="/main.css" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1382938379937" ignored="false" />
     <file path="/login.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383124064460" ignored="false" />
     <file path="/DefaultController.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383123552283" ignored="false" />
@@ -16,23 +46,25 @@
     <file path="/AdminController.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383122819986" ignored="false" />
     <file path="/index.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383199300810" ignored="false" />
     <file path="/admin.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383195984970" ignored="false" />
-    <file path="/view.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383207340182" ignored="false" />
+    <file path="/view.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383291451832" ignored="false" />
     <file path="/update.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383209464268" ignored="false" />
-    <file path="/_form.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383205326485" ignored="false" />
-    <file path="/create.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383196182179" ignored="false" />
-    <file path="/main.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383123980468" ignored="false" />
+    <file path="/_form.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383292332884" ignored="false" />
+    <file path="/create.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383276632662" ignored="false" />
+    <file path="/main.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383275530839" ignored="false" />
     <file path="/AdminModule.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383096525451" ignored="false" />
-    <file path="/Dummy.txt" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383179797042" ignored="false" />
+    <file path="/Dummy.txt" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383265350187" ignored="false" />
     <file path="/style.css" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383113458014" ignored="false" />
     <file path="/yiilite.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383119111110" ignored="false" />
     <file path="/School.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383189636212" ignored="false" />
     <file path="/www/web/default/manyouxingkong/demos/blog/protected/models/Lookup.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383189590609" ignored="false" />
-    <file path="/ClaseController.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383199184505" ignored="false" />
-    <file path="/Clase.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383199479893" ignored="false" />
-    <file path="/GradeController.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383201347924" ignored="false" />
+    <file path="/ClaseController.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383274066967" ignored="false" />
+    <file path="/Clase.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383286873102" ignored="false" />
+    <file path="/GradeController.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383266782832" ignored="false" />
     <file path="/_view.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383202946350" ignored="false" />
-    <file path="/User.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383210417184" ignored="false" />
-    <file path="/UserController.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383210226405" ignored="false" />
+    <file path="/User.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383276555653" ignored="false" />
+    <file path="/UserController.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383292697417" ignored="false" />
+    <file path="/Student.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383288011173" ignored="false" />
+    <file path="/TeacherController.php" changelist="51f8e428-0a5c-4a66-91ca-0e117e99b2ef" time="1383295002956" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +83,81 @@
     <favorites_list name="myxk" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="TeacherController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/TeacherController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="725" selection-end="725" vertical-scroll-proportion="-6.7647057">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="-12.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/AdminController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="388" selection-end="522" vertical-scroll-proportion="-10.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClaseController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/ClaseController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="16" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.6057495">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GradeController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/GradeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="14" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-10.0">
+              <folding>
+                <marker date="1383298393122" expanded="true" signature="733:887" placeholder="..." />
+                <marker date="1383298393122" expanded="true" signature="901:1054" placeholder="..." />
+                <marker date="1383298393122" expanded="true" signature="1068:1215" placeholder="..." />
+                <marker date="1383298393122" expanded="true" signature="1229:1288" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SchoolController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/SchoolController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="12" selection-start="728" selection-end="1276" vertical-scroll-proportion="-5.0">
+              <folding>
+                <marker date="1383298401247" expanded="true" signature="734:873" placeholder="..." />
+                <marker date="1383298401247" expanded="true" signature="887:1040" placeholder="..." />
+                <marker date="1383298401247" expanded="true" signature="1054:1201" placeholder="..." />
+                <marker date="1383298401247" expanded="true" signature="1215:1274" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/layouts/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="35" selection-start="3055" selection-end="3055" vertical-scroll-proportion="-3.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -69,22 +175,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/GradeController.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/ClaseController.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/clase/_view.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/clase/view.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/clase/_form.php" />
-        <option value="$PROJECT_DIR$/protected/models/Grade.php" />
-        <option value="$PROJECT_DIR$/protected/models/Clase.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/views/clase/update.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/user/admin.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/user/create.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/user/_form.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/clase/view.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/clase/_search.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/views/user/update.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/protected/models/Clase.php" />
         <option value="$PROJECT_DIR$/protected/models/User.php" />
+        <option value="$PROJECT_DIR$/protected/models/Student.php" />
         <option value="$PROJECT_DIR$/protected/modules/admin/views/user/view.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/user/_form.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/TeacherController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/GradeController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/SchoolController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/ClaseController.php" />
       </list>
     </option>
   </component>
@@ -167,6 +273,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myxk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myxk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -182,6 +318,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teacher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myxk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myxk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -214,148 +388,8 @@
               <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myxk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extensions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,9 +400,9 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="options.lastSelected" value="vcs.Git" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -390,13 +424,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/protected/modules/admin/controllers" />
+      <recent name="$PROJECT_DIR$/protected/modules/admin/views" />
       <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/protected/modules/admin/views/layouts" />
       <recent name="$PROJECT_DIR$/protected/models" />
-      <recent name="$PROJECT_DIR$/protected/modules/admin/config" />
-      <recent name="$PROJECT_DIR$/protected/modules/admin/views/default" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/protected/modules/admin/views/user/student" />
       <recent name="$PROJECT_DIR$/protected/modules/admin/modules" />
       <recent name="$PROJECT_DIR$/protected/modules/admin/models" />
     </key>
@@ -446,10 +481,11 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27104723" sideWeight="0.67021275" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26078027" sideWeight="0.67021275" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -458,7 +494,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -525,114 +560,124 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/user/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="14" selection-start="426" selection-end="426" vertical-scroll-proportion="0.42168674">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/user/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/yiilite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7531" column="20" selection-start="220275" selection-end="220275" vertical-scroll-proportion="0.3493976">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/models/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="18" selection-start="4853" selection-end="4853" vertical-scroll-proportion="-13.791667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/web/widgets/CActiveForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="844" column="20" selection-start="35330" selection-end="35330" vertical-scroll-proportion="0.43975905">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/user/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="-9.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/user/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="10" selection-start="1680" selection-end="1680" vertical-scroll-proportion="-12.541667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/SchoolController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="11" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.48192772">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/user/_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="0.5421687">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/GradeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="4" selection-start="1373" selection-end="1481" vertical-scroll-proportion="0.18072289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/admin/view.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/Student.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="7" selection-start="832" selection-end="832" vertical-scroll-proportion="-18.75">
+        <state line="46" column="73" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.19565217">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="36" selection-start="887" selection-end="893" vertical-scroll-proportion="-7.5">
+        <state line="36" column="37" selection-start="834" selection-end="834" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/user/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="23" selection-start="297" selection-end="297" vertical-scroll-proportion="0.30722892">
+        <state line="34" column="25" selection-start="959" selection-end="959" vertical-scroll-proportion="1.0273973">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/user/update.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/Clase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="31" selection-start="450" selection-end="450" vertical-scroll-proportion="0.55772996">
+        <state line="82" column="19" selection-start="2234" selection-end="2234" vertical-scroll-proportion="-8.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/admin/update.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/user/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="37" selection-start="472" selection-end="472" vertical-scroll-proportion="0.52837574">
+        <state line="77" column="96" selection-start="2918" selection-end="2918" vertical-scroll-proportion="-13.166667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/teacher/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="35" selection-start="3055" selection-end="3055" vertical-scroll-proportion="-3.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="388" selection-end="522" vertical-scroll-proportion="-10.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/CommonController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="10" selection-start="414" selection-end="414" vertical-scroll-proportion="0.49281314">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/GradeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="14" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-10.0">
+          <folding>
+            <marker date="1383298393122" expanded="true" signature="733:887" placeholder="..." />
+            <marker date="1383298393122" expanded="true" signature="901:1054" placeholder="..." />
+            <marker date="1383298393122" expanded="true" signature="1068:1215" placeholder="..." />
+            <marker date="1383298393122" expanded="true" signature="1229:1288" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/SchoolController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="12" selection-start="728" selection-end="1276" vertical-scroll-proportion="-5.0">
+          <folding>
+            <marker date="1383298401247" expanded="true" signature="734:873" placeholder="..." />
+            <marker date="1383298401247" expanded="true" signature="887:1040" placeholder="..." />
+            <marker date="1383298401247" expanded="true" signature="1054:1201" placeholder="..." />
+            <marker date="1383298401247" expanded="true" signature="1215:1274" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/TeacherController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="725" selection-end="725" vertical-scroll-proportion="-6.7647057">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="24" selection-start="627" selection-end="627" vertical-scroll-proportion="0.90712744">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/ClaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="16" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.6057495">
           <folding />
         </state>
       </provider>

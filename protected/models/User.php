@@ -34,7 +34,7 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password,  type', 'required'),
+			array('username, password', 'required'),
             array('username','unique'),
 			array('username, password', 'length', 'max'=>20),
 			array('email, phone', 'length', 'max'=>50),
@@ -129,6 +129,7 @@ class User extends CActiveRecord
             if($this->isNewRecord)
             {
                 $this->ctime=$this->etime=time();
+                $this->type=1; //默认是学生
             }
             else
                 $this->etime=time();

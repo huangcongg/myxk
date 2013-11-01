@@ -27,21 +27,21 @@ class GradeController extends CommonController
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','dynamicgrade'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
+//			array('allow',  // allow all users to perform 'index' and 'view' actions
+//				'actions'=>array('index','view','dynamicgrade'),
+//				'users'=>array('*'),
+//			),
+//			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+//				'actions'=>array('create','update'),
+//				'users'=>array('@'),
+//			),
+//			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+//				'actions'=>array('admin','delete'),
+//				'users'=>array('admin'),
+//			),
+//			array('deny',  // deny all users
+//				'users'=>array('*'),
+//			),
 		);
 	}
 
@@ -171,19 +171,5 @@ class GradeController extends CommonController
 		}
 	}
 
-    public function actionDynamicgrade(){
-        $school_id = $_POST['school_id'];
 
-        //search all grades by school_id
-        $grade = new Grade;
-        $model = $grade->findAll('school_id=:school_id',array(':school_id'=>$school_id));
-
-        $data = array();
-        foreach($model as $key => $v){
-            $data[$v->grade_id]=$v->grade_name;
-            echo CHtml::tag('option',array('value'=>$v->grade_id),CHtml::encode($v->grade_name),true);
-        }
-
-
-    }
 }
