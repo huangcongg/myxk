@@ -308,7 +308,11 @@ class CMenu extends CWidget
 	 */
 	protected function isItemActive($item,$route)
 	{
-		if(isset($item['url']) && is_array($item['url']) && !strcasecmp(trim($item['url'][0],'/'),$route))
+        //原版
+        //isset($item['url']) && is_array($item['url']) && !strcasecmp(trim($item['url'][0],'/'),$route)
+
+        //修改版本
+		if(isset($item['url']) && is_array($item['url']) && strpos('/'.$route,trim($item['url'][0],'/'))>0)
 		{
 			unset($item['url']['#']);
 			if(count($item['url'])>1)

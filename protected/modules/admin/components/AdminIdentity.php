@@ -8,7 +8,8 @@
 class AdminIdentity extends CUserIdentity
 {
     private $_id;
-	/**
+
+    /**
 	 * Authenticates a user.
 	 * The example implementation makes sure if the username and password
 	 * are both 'demo'.
@@ -34,8 +35,17 @@ class AdminIdentity extends CUserIdentity
         return $this->errorCode==self::ERROR_NONE;
 	}
 
+
+
     public function getId()
     {
         return $this->_id;
     }
+
+    public function getUserName()
+    {
+        return $this->username;
+    }
+
+
 }

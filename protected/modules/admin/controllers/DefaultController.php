@@ -4,6 +4,7 @@ class DefaultController extends CommonController
 {
 	public function actionIndex()
 	{
+        Yii::app()->user->checkAccess('isLogin');
 		$this->render('index');
 	}
 
@@ -28,8 +29,8 @@ class DefaultController extends CommonController
             $model->attributes=$_POST['AdminLoginForm'];
             // validate user input and redirect to the previous page if valid
             if($model->validate() && $model->login()){
-                Yii::app()->user->setReturnUrl(array('/admin/default/index'));
-                $this->redirect(Yii::app()->user->returnUrl);
+                Yii::app()->admin->setReturnUrl(array('/admin/default/index'));
+                $this->redirect(Yii::app()->admin->returnUrl);
             }
 
         }
@@ -42,7 +43,7 @@ class DefaultController extends CommonController
      */
     public function actionLogout()
     {
-        Yii::app()->user->logout();
+        Yii::app()->admin->logout(false);
         $this->redirect($this->createUrl('/admin/default/login'));
     }
 }

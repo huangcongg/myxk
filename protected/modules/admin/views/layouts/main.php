@@ -24,8 +24,8 @@
     <div class="top_wrapper">
         <div class="logo"></div>
         <div class="nav">
-        <?php if(!Yii::app()->user->isGuest): ?>
-            当前用户：<?php echo Yii::app()->user->name;?> <?php echo CHtml::link('退出系统',array('/admin/default/logout')); ?>
+        <?php if(!Yii::app()->admin->isGuest): ?>
+            当前用户：<?php echo Yii::app()->admin->name;?> <?php echo CHtml::link('退出系统',array('/admin/default/logout')); ?>
         <?php endif; ?>
         </div>
     </div>
@@ -46,32 +46,29 @@
     <div class="left">
         <?php $this->widget('zii.widgets.CMenu',array(
             'activateParents'=>true,
-            'activeCssClass'=>'folder_open',
-            'linkLabelWrapper'=>array('class'=>'end'),
+            'activeCssClass'=>'active',
             'items'=>array(
-                array('label'=>'首页', 'url'=>array('/admin/default/index'),'itemOptions'=>array('class'=>'folder')),
-                array('label'=>'学校管理', 'url'=>array('/admin/school/admin'),'itemOptions'=>array('class'=>'folder')),
-                array('label'=>'年级管理', 'url'=>array('/admin/grade/admin'),'itemOptions'=>array('class'=>'folder')),
-                array('label'=>'班级管理', 'url'=>array('/admin/clase/admin'),'itemOptions'=>array('class'=>'folder')),
+                array('label'=>'首页', 'url'=>array('/admin/default/index'),'linkOptions'=>array('class'=>'folder')),
+                array('label'=>'学校管理', 'url'=>array('/admin/school/admin'),'linkOptions'=>array('class'=>'folder')),
+                array('label'=>'年级管理', 'url'=>array('/admin/grade/admin'),'linkOptions'=>array('class'=>'folder')),
+                array('label'=>'班级管理', 'url'=>array('/admin/clase/admin'),'linkOptions'=>array('class'=>'folder')),
                 array('label'=>'用户管理',
-                    'url'=>'javascript:;',
-                    'itemOptions'=>array('class'=>'folder'),
+                    'linkOptions'=>array('class'=>'folder'),
                     'items'=>array(
-                        array('label'=>'学生管理','url'=>array('/admin/user/admin')),
+                        array('label'=>'学生管理','url'=>array('/admin/user/admin'),'itemOptions'=>array('class'=>'nav')),
 //                        array('label'=>'教师管理','url'=>array('/admin/teacher/admin')),
                     ),
                 ),
                 array('label'=>'管理员管理',
-                    'url'=>'javascript:;',
-                    'itemOptions'=>array('class'=>'folder'),
+                    'linkOptions'=>array('class'=>'folder'),
                     'items'=>array(
-                    array('label'=>'管理员列表','url'=>array('/admin/admin/admin')),
+                        array('label'=>'管理员列表','url'=>array('/admin/admin/admin'),'linkOptions'=>array('class'=>'end'),'itemOptions'=>array('class'=>'nav')),
 //                    array('label'=>'角色管理','url'=>array('/admin/admin/role')),
                 )),
 //                array('label'=>'课程管理', 'url'=>array('/admin/course/index'),'itemOptions'=>array('class'=>'folder')),
                 //array('label'=>'返回前台', 'url'=>array('/site/index')),
-//                array('label'=>'登录', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-//                array('label'=>'退出 ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+                array('label'=>'登录', 'url'=>array('/admin/default/login'), 'visible'=>Yii::app()->admin->isGuest),
+                array('label'=>'退出 ('.Yii::app()->admin->name.')', 'url'=>array('/admin/default/logout'), 'visible'=>!Yii::app()->admin->isGuest)
             ),
         )); ?>
 

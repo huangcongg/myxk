@@ -15,6 +15,15 @@ class AdminModule extends CWebModule
 
         Yii::app()->theme = 'classic';
 
+        Yii::app()->setComponents(array(
+            'admin'=>array(
+                'class'=>'AuthWebUser',
+                'stateKeyPrefix'=>'admin',
+                'loginUrl'=>Yii::app()->createUrl('admin/default/login'),
+            ),
+        ));
+
+
 	}
 
 	public function beforeControllerAction($controller, $action)
