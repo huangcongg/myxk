@@ -1,10 +1,15 @@
 <?php
 
-class DefaultController extends CommonController
+class DefaultController extends Controller
 {
+    public $layout = 'application.modules.admin.views.layouts.main';
+
 	public function actionIndex()
 	{
-        Yii::app()->user->checkAccess('isLogin');
+        if(Yii::app()->admin->isGuest){
+            Yii::app()->admin->loginRequired();
+        }
+
 		$this->render('index');
 	}
 

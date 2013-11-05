@@ -31,13 +31,14 @@
 		<?php echo $form->labelEx($model,'grade_id'); ?>
 		<?php echo $form->dropDownList($model,'school_id',School::items(),
             array(
+                'prompt'=>'请选择',
                 'ajax'=> array(
                     'type'=>'POST', //request type
                     'url'=>CController::createUrl('/admin/clase/dynamicgrade'), //url to call.
                     'update'=>'#Clase_grade_id', //selector to update
                     'data'=>array('school_id'=>'js:this.value')
                 ))); ?>
-        <?php echo $form->dropDownList($model,'grade_id',$model->getGradeList($model->school_id)); ?>
+        <?php echo $form->dropDownList($model,'grade_id',Clase::model()->getGradeList($model->school_id),array('prompt'=>'请选择')); ?>
 
 		<?php echo $form->error($model,'grade_id'); ?>
 	</div>

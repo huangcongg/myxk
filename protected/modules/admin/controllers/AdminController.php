@@ -80,10 +80,16 @@ class AdminController extends CommonController
 
 		if(isset($_POST['Admin']))
 		{
+
 			$model->attributes=$_POST['Admin'];
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->admin_id));
 		}
+
+        //非post提交
+        $model->initialPassword = $model->password;
+        $model->password = '';
 
 		$this->render('update',array(
 			'model'=>$model,
@@ -143,7 +149,6 @@ class AdminController extends CommonController
 
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
-        $model->password = null;
 		return $model;
 	}
 

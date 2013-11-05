@@ -29,4 +29,15 @@ class CommonController extends Controller
 		);
 	}
 	*/
+
+    function beforeAction($action){
+
+        if (parent::beforeAction($action)) {
+            if(Yii::app()->admin->isGuest){
+                Yii::app()->admin->loginRequired();
+            }else{
+                return true;
+            }
+        }
+    }
 }

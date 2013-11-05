@@ -18,18 +18,21 @@ $this->menu=array(
 <h1>查看用户 #<?php echo $model->username; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
+	'data'=>$student,
 	'attributes'=>array(
-		'user_id',
-		'username',
-		'password',
-		'email',
-		'phone',
-		array('name'=>'ctime','type'=>'datetime'),
-        array('name'=>'etime','type'=>'datetime'),
-		'lasttime',
+		'user.user_id',
+		'user.username',
+		'user.email',
+		'user.phone',
+		array('name'=>'user.ctime','type'=>'datetime'),
+        array('name'=>'user.etime','type'=>'datetime'),
+        array('name'=>'user.lasttime','type'=>'datetime'),
 		'lastip',
 		'type',
 		'total_points',
+        'realname',
+        'school.school_name',
+        'grade.grade_name',
+        'clase.clase_name',
 	),
 )); ?>

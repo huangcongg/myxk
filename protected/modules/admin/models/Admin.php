@@ -19,7 +19,6 @@
 class Admin extends CActiveRecord
 {
     public $initialPassword = null;
-    public $repeat_password = null;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -36,15 +35,15 @@ class Admin extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username,  email, phone, group', 'required'),
-            array('password,repeat_password','required','on'=>'resetPassword,insert'),
+			array('username,  email, phone', 'required'),
+            array('password','required','on'=>'insert'),
 			array('phone', 'numerical', 'integerOnly'=>true),
             array('username', 'length', 'min'=>3,'max'=>20),
-            array('password,repeat_password','length','min'=>6,'max'=>20,'on'=>'insert'),
-            array('repeat_password','compare','compareAttribute'=>'password'),
+            array('password','length','min'=>6,'max'=>20,'on'=>'insert,update'),
 			array('phone', 'length', 'max'=>20),
 			array('email', 'length', 'max'=>50),
             array('email', 'email'),
+            array('initialPassword','safe','on'=>'update'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('admin_id, username, password, email, phone, ctime, etime, regip, lasttime, lastip, group', 'safe', 'on'=>'search'),
@@ -79,7 +78,6 @@ class Admin extends CActiveRecord
 			'lasttime' => '最后登录时间',
 			'lastip' => '最后登录ip',
 			'group' => '用户组',
-            'repeat_password' =>'确认密码',
 		);
 	}
 
@@ -111,10 +109,11 @@ class Admin extends CActiveRecord
 		$criteria->compare('regip',$this->regip,true);
 		$criteria->compare('lasttime',$this->lasttime);
 		$criteria->compare('lastip',$this->lastip,true);
-		$criteria->compare('group',$this->group);
+        $criteria->addCondition('`group` = 1');
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+
 		));
 	}
 
@@ -132,8 +131,6 @@ class Admin extends CActiveRecord
 
     public function validatePassword($password)
     {
-        var_dump($this->hashPassword($password,$this->salt));echo "<br>";
-        var_dump($this->password);
         return $this->hashPassword($password,$this->salt)===$this->password;
     }
 
@@ -143,34 +140,28 @@ class Admin extends CActiveRecord
     }
 
     public function beforeSave(){
-        if(empty($this->password)&&empty($this->repeat_password)&&!empty($this->initialPassword))
-            $this->password = $this->repeat_password = $this->initialPassword;
 
-        if(!empty($this)){
-
-            if($this->isNewRecord){
-                $salt = $this->generate_salt(5);//生成salt
-                $this->salt = $salt;
-                $this->lasttime = $this->etime = $this->ctime = time();
-                $this->lastip = $this->regip = Yii::app()->request->userHostAddress;
-            }else{
-                $this->etime = time();
-
-            }
-
+        if($this->isNewRecord){ //如果是增加
+            $salt = $this->generate_salt(5);//生成salt
+            $this->salt = $salt;
+            $this->lasttime = $this->etime = $this->ctime = time();
+            $this->lastip = $this->regip = Yii::app()->request->userHostAddress;
+            $this->group = 1;
             $this->password = $this->hashPassword($this->password,$this->salt);
-            $this->repeat_password = $this->hashPassword($this->repeat_password,$this->salt);
+        }else{
+            $this->etime = time();
+
+            //如果密码没有填写并且初始密码不为空，为更改状态
+            if(empty($this->password)&&!empty($this->initialPassword))
+                $this->password = $this->initialPassword;
+            else{ //否则视为新密码，需要加密
+                $this->password = $this->hashPassword($this->password,$this->salt);
+            }
         }
 
         return parent::beforeSave();
     }
 
-//    public function afterFind(){
-//        $this->initialPassword = $this->password;
-//        $this->password = null;
-//
-//        parent::afterFind();
-//    }
 
     protected function generate_salt($length) {
         $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_[]{}<>~`+=,.;:/?|';

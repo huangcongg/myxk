@@ -1,7 +1,7 @@
 10
 
 dir
-2
+3
 svn://192.168.1.33/myxk/framework/messages
 svn://192.168.1.33/myxk
 
@@ -74,16 +74,16 @@ dir
 nl
 dir
 
-th
-dir
-
 pl
 dir
 
-hu
+th
 dir
 
 no
+dir
+
+hu
 dir
 
 vi
@@ -98,16 +98,19 @@ dir
 lv
 dir
 
-pt
+ca
 dir
 
-ca
+pt
 dir
 
 tr
 dir
 
 ru
+dir
+
+zh_tw
 dir
 
 config.php
@@ -143,9 +146,6 @@ has-props
 
 
 674
-
-zh_tw
-dir
 
 id
 dir

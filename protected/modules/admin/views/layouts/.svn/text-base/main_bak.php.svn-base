@@ -37,8 +37,8 @@
                 )),
                 array('label'=>'课程管理', 'url'=>array('/admin/course/index')),
                 //array('label'=>'返回前台', 'url'=>array('/site/index')),
-				array('label'=>'登录', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'退出 ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'登录', 'url'=>array('/site/login'), 'visible'=>Yii::app()->admin->isGuest),
+				array('label'=>'退出 ('.Yii::app()->admin->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->admin->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->

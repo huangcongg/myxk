@@ -1,7 +1,7 @@
 10
 
 dir
-2
+3
 svn://192.168.1.33/myxk/framework/base
 svn://192.168.1.33/myxk
 
@@ -128,40 +128,6 @@ has-props
 
 1068
 
-CHttpException.php
-file
-
-
-
-
-2013-10-28T04:46:01.991099Z
-c7c7665d373518cc765dbdfca4d712f8
-2013-11-01T02:31:18.495756Z
-2
-hcg
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-990
-
 CException.php
 file
 
@@ -195,6 +161,40 @@ has-props
 
 
 410
+
+CHttpException.php
+file
+
+
+
+
+2013-10-28T04:46:01.991099Z
+c7c7665d373518cc765dbdfca4d712f8
+2013-11-01T02:31:18.495756Z
+2
+hcg
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+990
 
 CBehavior.php
 file
@@ -230,40 +230,6 @@ has-props
 
 3318
 
-CModel.php
-file
-
-
-
-
-2013-10-28T04:46:01.991099Z
-42dc870c25f1591bc91d428c75a8b89d
-2013-11-01T02:31:18.495756Z
-2
-hcg
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-20491
-
 CExceptionEvent.php
 file
 
@@ -298,14 +264,14 @@ has-props
 
 785
 
-CModelEvent.php
+CModel.php
 file
 
 
 
 
-2013-10-28T04:46:01.992099Z
-906a301eaec8abdf54982ec69a7a090f
+2013-10-28T04:46:01.991099Z
+42dc870c25f1591bc91d428c75a8b89d
 2013-11-01T02:31:18.495756Z
 2
 hcg
@@ -330,41 +296,7 @@ has-props
 
 
 
-1013
-
-CSecurityManager.php
-file
-
-
-
-
-2013-10-28T04:46:01.993099Z
-aaf08b83570ee61ab7e4ee0d83dcf8a9
-2013-11-01T02:31:18.495756Z
-2
-hcg
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-17738
+20491
 
 CComponent.php
 file
@@ -400,6 +332,74 @@ has-props
 
 22510
 
+CSecurityManager.php
+file
+
+
+
+
+2013-10-28T04:46:01.993099Z
+aaf08b83570ee61ab7e4ee0d83dcf8a9
+2013-11-01T02:31:18.495756Z
+2
+hcg
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17738
+
+CModelEvent.php
+file
+
+
+
+
+2013-10-28T04:46:01.992099Z
+906a301eaec8abdf54982ec69a7a090f
+2013-11-01T02:31:18.495756Z
+2
+hcg
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1013
+
 CApplication.php
 file
 
@@ -434,40 +434,6 @@ has-props
 
 31775
 
-interfaces.php
-file
-
-
-
-
-2013-10-28T04:46:01.991099Z
-55c9436d66862f41eaa66f548a110cad
-2013-11-01T02:31:18.495756Z
-2
-hcg
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-22851
-
 CModelBehavior.php
 file
 
@@ -501,6 +467,40 @@ has-props
 
 
 2093
+
+interfaces.php
+file
+
+
+
+
+2013-10-28T04:46:01.991099Z
+55c9436d66862f41eaa66f548a110cad
+2013-11-01T02:31:18.495756Z
+2
+hcg
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22851
 
 CStatePersister.php
 file

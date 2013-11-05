@@ -7,6 +7,8 @@
  */
 class UserIdentity extends CUserIdentity
 {
+    public $user;
+    public $_id;
 	/**
 	 * Authenticates a user.
 	 * The example implementation makes sure if the username and password
@@ -30,4 +32,24 @@ class UserIdentity extends CUserIdentity
 			$this->errorCode=self::ERROR_NONE;
 		return !$this->errorCode;
 	}
+
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    public function getId()
+    {
+        return $this->_id;
+    }
+
+    public function getUserName()
+    {
+        return $this->username;
+    }
+
+    public function setUser(CActiveRecord $user)
+    {
+        $this->user=$user->attributes;
+    }
 }

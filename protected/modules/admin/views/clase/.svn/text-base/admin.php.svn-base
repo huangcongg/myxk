@@ -43,8 +43,8 @@ or <b>=</b>)
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'class_id',
-		'class_name',
+		'clase_id',
+		'clase_name',
 		'grade_id',
 		array(
 			'class'=>'CButtonColumn',

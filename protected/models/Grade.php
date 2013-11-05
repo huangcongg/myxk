@@ -58,7 +58,7 @@ class Grade extends CActiveRecord
 		return array(
 			'grade_id' => '年级id',
 			'grade_name' => '年级名称',
-			'school_id' => '学校id',
+			'school_id' => '所属学校',
 		);
 	}
 

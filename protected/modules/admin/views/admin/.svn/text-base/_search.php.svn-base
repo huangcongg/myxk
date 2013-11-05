@@ -72,12 +72,6 @@
         ));?>
 	</div>
 
-
-	<div class="row">
-		<?php echo $form->label($model,'group'); ?>
-		<?php echo $form->textField($model,'group'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('搜索'); ?>
 	</div>

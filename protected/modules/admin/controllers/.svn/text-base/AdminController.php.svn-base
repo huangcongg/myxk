@@ -14,8 +14,8 @@ class AdminController extends CommonController
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+//			'accessControl', // perform access control for CRUD operations
+//			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -80,10 +80,16 @@ class AdminController extends CommonController
 
 		if(isset($_POST['Admin']))
 		{
+
 			$model->attributes=$_POST['Admin'];
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->admin_id));
 		}
+
+        //非post提交
+        $model->initialPassword = $model->password;
+        $model->password = '';
 
 		$this->render('update',array(
 			'model'=>$model,
@@ -143,7 +149,6 @@ class AdminController extends CommonController
 
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
-        $model->password = null;
 		return $model;
 	}
 
@@ -180,7 +185,7 @@ class AdminController extends CommonController
             $model->attributes=$_POST['LoginForm'];
             // validate user input and redirect to the previous page if valid
             if($model->validate() && $model->login())
-                $this->redirect(Yii::app()->user->returnUrl);
+                $this->redirect(Yii::app()->admin->returnUrl);
         }
         // display the login form
         $this->render('login',array('model'=>$model));
@@ -191,7 +196,7 @@ class AdminController extends CommonController
      */
     public function actionLogout()
     {
-        Yii::app()->user->logout();
+        Yii::app()->admin->logout();
         $this->redirect(Yii::app()->homeUrl);
     }
 }

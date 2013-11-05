@@ -38,7 +38,7 @@ class TeacherController extends CommonController
     public function actionView($id)
     {
         $model = $this->loadModel($id);
-        $student = $this->loadModelStduent($id);
+        $student = $this->loadModelStudent($id);
 
         $type = array('1'=>'学生','2'=>'教师','3'=>'授课教师');
         $model->type = $type[$model->type];
@@ -135,10 +135,11 @@ class TeacherController extends CommonController
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('User');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+        $this->actionAdmin();
+//		$dataProvider=new CActiveDataProvider('User');
+//		$this->render('index',array(
+//			'dataProvider'=>$dataProvider,
+//		));
 	}
 
 	/**

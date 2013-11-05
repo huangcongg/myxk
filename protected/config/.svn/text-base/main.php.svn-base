@@ -58,12 +58,11 @@ return array(
                 ),
             ),
         ),
-		'user'=>array(
-			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
-            'class' => 'admin.modules.auth.components.AuthWebUser',
-//            'admins' => array('admin', 'foo', 'bar'), // users with full access
-		),
+
+        'user'=>array(
+            'stateKeyPrefix' =>'member',
+            'allowAutoLogin'=>true,//这里设置允许cookie保存登录信息，一边下次自动登录
+        ),
         'bootstrap'=>array(
             'class'=>'bootstrap.components.Bootstrap',
         ),

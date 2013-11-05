@@ -26,16 +26,11 @@
 	</div>
 
 	<div class="row">
+        <?php echo $form->hiddenField($model,'initialPassword'); ?>
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model,'repeat_password'); ?>
-        <?php echo $form->passwordField($model,'repeat_password',array('size'=>20,'maxlength'=>20)); ?>
-        <?php echo $form->error($model,'repeat_password'); ?>
-    </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
@@ -47,12 +42,6 @@
 		<?php echo $form->labelEx($model,'phone'); ?>
 		<?php echo $form->textField($model,'phone',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'phone'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'group'); ?>
-		<?php echo $form->dropDownList($model,'group',array('1'=>'系统管理员','2'=>'校级管理员')); ?>
-		<?php echo $form->error($model,'group'); ?>
 	</div>
 
 	<div class="row buttons">

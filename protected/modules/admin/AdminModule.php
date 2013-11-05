@@ -17,6 +17,7 @@ class AdminModule extends CWebModule
 
         Yii::app()->setComponents(array(
             'admin'=>array(
+                'allowAutoLogin'=>true,
                 'class'=>'AuthWebUser',
                 'stateKeyPrefix'=>'admin',
                 'loginUrl'=>Yii::app()->createUrl('admin/default/login'),

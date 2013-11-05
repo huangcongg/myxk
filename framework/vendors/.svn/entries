@@ -1,7 +1,7 @@
 10
 
 dir
-2
+3
 svn://192.168.1.33/myxk/framework/vendors
 svn://192.168.1.33/myxk
 
@@ -29,16 +29,16 @@ hcg
 jquery
 dir
 
-console-normalizer
-dir
-
 markdown
 dir
 
-gettext
+console-normalizer
 dir
 
 cldr
+dir
+
+gettext
 dir
 
 punycode
@@ -81,19 +81,19 @@ has-props
 history
 dir
 
-TextHighlighter
+Net_IDNA2
 dir
 
-Net_IDNA2
+TextHighlighter
 dir
 
 bbq
 dir
 
-adodb
+json
 dir
 
-json
+adodb
 dir
 
 htmlpurifier

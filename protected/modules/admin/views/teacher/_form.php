@@ -51,33 +51,11 @@
 
     <div class="row">
         <?php echo $form->labelEx($student,'school_id'); ?>
-        <?php echo $form->dropDownList($student,'school_id',School::model()->items(),array(
-            'ajax'=>array(
-                'type'=>'post',
-                'url'=>Yii::app()->createUrl('admin/user/dynamicGrade'),
-                'data'=>array('school_id'=>'js:this.value'),
-                'update'=>'#Student_grade_id',
-            ))); ?>
+        <?php echo $form->dropDownList($student,'school_id',School::model()->items(),array('prompt'=>'请选择')); ?>
         <?php echo $form->error($student,'school_id'); ?>
     </div>
 
-    <div class="row">
-        <?php echo $form->labelEx($student,'grade_id'); ?>
-        <?php echo $form->dropDownList($student,'grade_id',Clase::model()->getGradeList($student->school_id),array(
-            'ajax'=>array(
-                'type'=>'post',
-                'url'=>Yii::app()->createUrl('admin/user/dynamicClase'),
-                'data'=>array('grade_id'=>'js:this.value'),
-                'update'=>'#Student_clase_id',
-        ))); ?>
-        <?php echo $form->error($student,'grade_id'); ?>
-    </div>
 
-    <div class="row">
-        <?php echo $form->labelEx($student,'clase_id'); ?>
-        <?php echo $form->dropDownList($student,'clase_id',Clase::model()->items($student->grade_id)); ?>
-        <?php echo $form->error($student,'clase_id'); ?>
-    </div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? '添加' : '保存'); ?>

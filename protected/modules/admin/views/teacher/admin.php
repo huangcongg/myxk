@@ -3,12 +3,11 @@
 /* @var $model User */
 
 $this->breadcrumbs=array(
-	'用户管理'=>array('index'),
-	'管理',
+	'教师管理',
 );
 
 $this->menu=array(
-	array('label'=>'添加用户', 'url'=>array('create')),
+	array('label'=>'添加教师', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -25,7 +24,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>用户管理</h1>
+<h1>教师管理</h1>
 
 <p>
 你还可以在某个关键词的开始部分输入比较运算符 (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -49,7 +48,7 @@ or <b>=</b>)，用以搜索符合要求的数据。
 		'password',
 		'email',
 		'phone',
-		'ctime',
+        array('name'=>'ctime','value'=>'date("Y-m-d H:i:s", $data->ctime)'),
 		/*
 		'etime',
 		'lasttime',
