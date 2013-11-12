@@ -1,0 +1,117 @@
+@charset "utf-8";
+body,h1,h2,h3,p,quote,small,form,input,ul,li,ol,label{margin:0px;padding:0px;}
+body{color:#666;background:#f4fbfe;font-size:12px;font-family:Arial, Helvetica, sans-serif;}
+li { list-style-type:none }
+.left { float:left}
+.right { float:right}
+.clear { clear:both}
+.page { width:960px; margin:auto}
+em { font-style:normal}
+a { color:#666; text-decoration:none}
+.buttons { border-radius:2px; border:1px solid #e37000; border-bottom:3px solid #e37000; background:#ff7e00; color:#FFF; line-height:20px; font-size:14px; padding:5px 20px;} 
+.l100 { margin-left:100px;}
+.ti { color:#888; font-size:12px; padding-left:10px; }
+strong { color:#F30; font-size:14px; font-weight:bold}
+h1,h2,h3,h4 { font-family:"Microsoft YaHei"; color:#333; font-weight:normal}
+.box1 { background:#e4e4e4;  border-bottom:3px solid #c1c1c1;border-right:3px solid #c1c1c1}
+.box2 { background:#FFF; border:1px #d3d7d8 solid; border-top:3px solid #ff5500}
+.box3 { background:#f9e8ca;  border-bottom:3px solid #fe9879;border-right:3px solid #fe9879}
+.msg1 { background:rgb(255,204,204); border:1px solid rgb(204,102,102); padding:8px 10px; border-radius:3px; color:rgb(204,0,51); margin-bottom:10px}
+/**全局结束**/
+#header .topmenu { background:#110b15; height:30px; line-height:30px; text-align:right; *overflow:hidden;}
+#header .topmenu a { color: #fff }
+#header .logo { position:relative; z-index:100; width:204px; }
+#header nav { background: url(../images/topmenu_bg.gif) repeat-x; height:98px;}
+#header .yun { background:url(../images/yun.gif) repeat-x; height:16px;}
+
+#wrapper { padding:15px 0px}
+#wrapper .mainbav { height:35px; line-height:35px; color:#666666; background:url(../images/page_icon.gif) no-repeat 2px 9px; padding-left:20px; }
+#wrapper .mainbav span { color:#ff6f31; font-style:normal}
+#wrapper .usermenu { width:200px; float:left}
+
+ul.container{width:200px;}
+li{list-style:none;text-align:left;}
+li.menu { padding:0px 0;width:100%;}
+li.button a{display:block;font-size:14px;height:30px;line-height:30px;	overflow:hidden;position:relative;width:170px; padding-left:30px;}
+li.button a:hover{text-decoration:none;}
+li.button a span { width:10px;  height:20px; float:right; padding-right:10px; background:url(../images/menu_icon.png) no-repeat; background-position:0px -204px}
+.dropdown{display:none; width:100%;}
+.dropdown li{line-height:30px;color:#CCCCCC;border-top:1px solid #ffffff;border-bottom:1px solid #f4d694;padding-left:35px; background:url(../images/menu_icon2.png) no-repeat  25px;}
+.dropdown li a { color:#5c5c5c; }
+/**手风琴菜单橙色定义**/
+#wrapper .orange { background:#fef0c9 ; border:2px solid #ff8e5a; }
+#wrapper .usermenu .orange li.button a {background:#ff7034 url(../images/menu_icon.png) no-repeat ;color: #FFF;border-top:1px solid #ffa27a;border-bottom:1px solid #e76127;border-right:1px solid #e76127;}
+/**手风琴菜单Icon控制**/
+#wrapper .usermenu li.button a.ke { background-position:7px 0px}
+#wrapper .usermenu li.button a.huo { background-position:7px -30px}
+#wrapper .usermenu li.button a.fl { background-position:7px -60px}
+#wrapper .usermenu li.button a.hu { background-position:7px -90px}
+#wrapper .usermenu li.button a.guan { background-position:7px -120px}
+#wrapper .usermenu li.button a.tong { background-position:7px -150px}
+#wrapper .usermenu li.button a.gai { background-position:7px -180px}
+/**内容区域开始**/
+#wrapper .content { border:1px #d0d0d0 solid; border-top:3px solid #454545; padding:15px; margin-left:20px; width:700px;float:right }
+	/**内容区域表单*/
+#wrapper .content .from { padding:25px;} 
+#wrapper .content .from li { line-height:45px; font-size:14px; clear:both }
+#wrapper .content .from li strong { color:#F30 }
+#wrapper .content .from li .type span { padding-right:15px; }
+#wrapper .content .from li .type span input { margin:0 5px;}
+#wrapper .content .from li em { width:100px; float:left; text-align:right}
+#wrapper .content .from li .input, #wrapper .content .from select { border:1px solid #b8b7b7; padding-left:5px; line-height:25px; height:25px; background:url(../images/xt.gif) repeat-x; }
+	/**名师相关**/
+#wrapper .Teacher .userlist{ background:#e4e4e4; width:415px; padding:20px; margin: 10px; border-bottom:3px solid #c1c1c1;border-right:3px solid #c1c1c1; float:left}
+#wrapper .Teacher .userlist img { width:255px; height:180px; }
+#wrapper .Teacher .userlist .userinfo { float:right; width:150px; line-height:35px; color:#555 }
+#wrapper .Teacher .userlist .userinfo .p { max-height:80px; overflow:hidden; text-overflow: ellipsis; text-overflow: ellipsis   }
+#wrapper .Teacher .userlist .usersummary { line-height:20px; padding-top:10px; border-top: #666 1px dashed; margin-top:10px;}
+#wrapper .Teacher .users { width:257px; padding:20px; text-align:center; line-height:25px; margin-bottom:15px;}
+#wrapper .Teacher .users img { max-width:230px; max-height:300px}
+#wrapper .Teacher .video, #wrapper .Teacher .xueke  { width:280px; padding:10px; margin-bottom:15px;  }
+#wrapper h3 { font-size:18px; font-weight:normal; line-height: 30px}
+#wrapper .Teacher .userinfo { width:640px; padding-bottom:20px; color:#333}
+#wrapper .Teacher .userinfo .tits { border-bottom:1px solid #ff5500; margin-bottom:10px;  }
+#wrapper .Teacher .userinfo p { line-height:20px; margin-bottom:10px;}
+#wrapper .Teacher .userinfo .tits span { color:#FFF; background:#F50; padding: 10px; display:block; width:80px; font-size:14px; text-align:center}
+#wrapper .Teacher .v_list li { clear:both; padding:5px; line-height:25px;}
+#wrapper .Teacher .v_list li  b { color:#333}
+#wrapper .Teacher .v_list li .pic { float:left; margin-right:10px; }
+#wrapper .Teacher .v_list li .pic img { border:1px solid #CCC; width:90px; height:60px;}
+#wrapper .Teacher .list2 li { clear:both; background:#e5e5e5 url(../images/menu_icon2.png) no-repeat 8px 0px; padding:5px 15px; line-height:25px; margin:5px 0px;}
+#wrapper .Teacher .xueke  { width:270px; padding:15px; margin-bottom:15px;  }
+#wrapper .Teacher .xueke p { line-height:30px; }
+#wrapper .Teacher .xueke strong { font-size:12px; font-weight:normal}
+#wrapper .Teacher .xueke .gz { border-top:#F60 1px dashed; padding-top:10px;}
+#wrapper .Teacher .pagevideo { background:#000; margin-bottom:15px;}
+#wrapper .Teacher .video_info { background: #f9f9f9; border:1px solid #d3d7d8; padding:15px; width:610px;}
+#wrapper .Teacher .txt { line-height:20px;}
+#wrapper .Teacher .txt p { padding:5px;}
+#wrapper .kechen .tits2 {  background:url(../images/menu_icon2.png) repeat-x; background-position:0 -30px; height:30px; padding:8px;}
+#wrapper .kechen .buttons {height:25px; line-height:25px; padding:3px 15px; font-size:12px;}
+#wrapper .kechen section { padding:10px; background:#eeeeee; margin:10px 0 }
+#wrapper .kechen article { padding:5px 5px; color:#666666; line-height:20px;}
+#wrapper .kechen section em { color:#FF6600}
+/**教师中心**/
+#wrapper .table table { width:100%; text-align:center; line-height:30px; margin-bottom:15px;}
+#wrapper .table table th { background: rgb(69,69,69); line-height:35px; color:#FFF}
+#wrapper .table table tr.alt td { background:#E5E5E5;} 
+#wrapper .table table tr.over td { background:#FF8800; color:rgb(255,255,255)} 
+
+/**分页相关**/
+#wrapper .pages { padding:3px; margin:3px; text-align:center; clear:both; font-size:14px;}
+#wrapper .pages a { border:#B1B1B1 1px solid; color: #555; margin: 5px; padding:2px 5px; }
+#wrapper .pages .selected a {  FONT-WEIGHT: bold;  COLOR: #fff; margin: 5px; border:1px solid #e37000; background:#ff7e00; padding:2px 5px}
+
+#footer { background:#110b15; height:40px; line-height:40px; text-align:center}
+
+
+@media screen and (min-width:1300px){
+	.page { width:1200px}
+	#wrapper .content { width:940px;}
+	#wrapper .Teacher .userinfo { width:880px;}
+	#wrapper .Teacher .video_info { width:850px}
+	#wrapper .Teacher .userlist .userinfo .p { max-height:120px;   }
+	#wrapper .Teacher .userlist img { width:300px; height:230px }
+	#wrapper .Teacher .userlist { width:530px; }
+	#wrapper .Teacher .userlist .userinfo { width:210px;}
+}

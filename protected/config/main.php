@@ -20,35 +20,58 @@ return array(
 		'application.components.*',
         'application.modules.admin.controllers.*',
         'bootstrap.helpers.TbHtml',
-	),
+        'application.extensions.PHPExcel.*',
+    ),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 
-		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
+//		'gii'=>array(
+//			'class'=>'system.gii.GiiModule',
+//			'password'=>'123456',
+//			// If removed, Gii defaults to localhost only. Edit carefully to taste.
+//			'ipFilters'=>array('127.0.0.1','::1'),
+//		),
+        'gii'=>array(
+            'class'=>'system.gii.GiiModule',
 			'password'=>'123456',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
-		),
+            'generatorPaths'=>array(  //添加一个gii检索的路径
+                'bootstrap.gii',
+            ),
+        ),
         'admin' => array(
             'modules' => array(
-                'auth'
+                'auth',
             ),
-        )
+        ),
 
-	),
+
+
+    ),
 
 	// application components
 	'components'=>array(
         // uncomment the following to use a MySQL database
         'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=manyouxingkong',
+            'connectionString' => 'mysql:host=192.168.1.33;dbname=manyouxingkong',	#117.184.88.30
             'emulatePrepare' => true,
             'username' => 'root',
             'password' => '123',
             'charset' => 'utf8',
+		'enableParamLogging'=>true,
         ),
+//        'authManager' => array(
+//            'class' => 'CDbAuthManager',
+//            'connectionID' => 'db',
+//            'behaviors' => array(
+//                'auth' => array(
+//                    'class' => 'admin.modules.auth.components.AuthBehavior',
+//                ),
+//            ),
+//        ),
+
         'authManager' => array(
             'class' => 'CDbAuthManager',
             'connectionID' => 'db',
@@ -58,6 +81,8 @@ return array(
                 ),
             ),
         ),
+
+
 
         'user'=>array(
             'stateKeyPrefix' =>'member',
@@ -96,11 +121,11 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+				
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				*/
+				
 			),
 		),
 	),
